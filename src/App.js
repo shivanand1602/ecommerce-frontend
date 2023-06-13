@@ -37,6 +37,7 @@ import {auth} from './firebase'
 import {useDispatch} from 'react-redux'
 import { createOrUpdateUser } from './functions/auth'
 import { currentUser } from './functions/auth'
+import { HashRouter } from "react-router-dom";
 
 
 const App=()=>{
@@ -70,7 +71,7 @@ useEffect(()=>{
 
 
     return(
-      <>
+      <HashRouter>
        <Header/> 
        <SideDrawer />
        <ToastContainer />
@@ -110,7 +111,7 @@ useEffect(()=>{
           
           
        </Routes>
-      </>
+      </HashRouter>
     )
 }
 //<Route exact path="/user/history" element={<History />}/>
